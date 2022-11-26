@@ -3,7 +3,7 @@ import React from 'react';
 const Home = () => {
     return (
         <div>
-            {content}
+            <h1>Hello Web3Connect</h1>
         </div>
     )
 }

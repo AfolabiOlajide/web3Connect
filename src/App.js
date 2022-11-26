@@ -1,13 +1,16 @@
-import { WagmiConfig, createClient } from "wagmi";
+import { WagmiConfig, createClient, chain } from "wagmi";
 import { ConnectKitProvider, ConnectKitButton, getDefaultClient } from "connectkit";
 import Home from "./pages/Home";
 
 const alchemyId = "Fg6HLf1Ep4_Qz_fIX8KmhuoP1QkFPDGO";
 
+const chains = [chain.mainnet, chain.goerli];
+
 const client = createClient(
   getDefaultClient({
     appName: "Web3Connect",
     alchemyId,
+    chains
   }),
 );
 
